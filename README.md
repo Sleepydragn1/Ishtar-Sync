@@ -10,7 +10,9 @@ The timing for joining the host is difficult to get down consistently, and varie
 
 ## How It Works
 
-The program uses a host/client model where the host creates a server with a specified port and password, and the client connects using that port and authenticates using the password. The host is meant to be the host of the Destiny 2 lobby, who is starting the activity, while the client is the player who joins the host and has, in their fireteam, the remainder of the players. Both the host and client have a ready button, while the client also has the ability to set a delay in seconds, and a step amount in seconds as well. The ready button has a key binding, and there are additional key bindings for the client that allow them to increment or decrement the delay by the step amount. Once both the host and client are ready, the program on the host's machine clicks with the left mouse button, which starts the activity on that machine, and it sends a signal to the client. The client's program receives the signal, waits for time specified by the delay, and then presses enter, triggering them to join.
+The program uses a host/client model where the host creates a server with a specified port and password, and the client connects using that port and password. The host should be the host of the Destiny 2 lobby, who is starting the activity, while the client is the player who joins the host and has, in their fireteam, the remainder of the players. Both the host and client have a ready button, while the client also has the ability to set a delay and step amount, both in seconds. Once both the host and client are ready, the program on the host's machine clicks with the left mouse button, which starts the activity, and then it sends a signal to the client. The client's program receives the signal, waits for time specified by the delay, and then presses enter, triggering them to join the activity.
+
+If the join fails (i.e the join was either too late or too early), the host and client can reset the activity, and the client can adjust the delay value appropriately before trying again.
 
 ## Features
 * Networking *(wow!)*
