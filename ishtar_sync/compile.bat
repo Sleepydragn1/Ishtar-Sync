@@ -1,0 +1,1 @@
+pyinstaller --name="IshtarSync" --windowed --onefile ishtar_sync.py
