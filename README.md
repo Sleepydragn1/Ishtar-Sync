@@ -24,9 +24,10 @@ The program uses a host/client model where the host creates a server with a spec
 * No user feedback whatsoever
 * Almost no input validation
 * A blocking of user input until the host and client connect
+* A fair amount of initially planned, but ultimately unimplemented features *(see if you can spot them in the code!)*
 
 ## Tips
-If, for some incredibly specific reason you want to use this program (perhaps in the future Bungie will screw up and accidentally re-implement the bug?) here's some tips:
+If, for some incredibly specific reason you want to use this program (perhaps in the future Bungie will screw up and accidentally re-implement the bug?), here's some tips:
 * Running the Python version **(not the executable)** with the flag ```-l=INFO``` will give you *some* amount of insight into what the program is doing, and what the state of the network connection is.
 * You can tell that the program is connected if when the "Ready" button is pressed, it greys out and is unable to be pressed again.
 * Hosting will likely require port forwarding, and both hosting and joining may require you to turn off your firewall or create an exception for the program.
